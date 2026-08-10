@@ -234,6 +234,9 @@ func (s *store) latest(limit int) []speedLog {
 
 func (a *app) empty(w http.ResponseWriter, r *http.Request) {
 	applyCommonHeaders(w, r)
+	if r.Method == http.MethodPost {
+		_, _ = io.Copy(io.Discard, r.Body)
+	}
 	w.WriteHeader(http.StatusOK)
 }
 
