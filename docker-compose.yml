@@ -1,0 +1,18 @@
+services:
+  speedtest-x-go:
+    image: ghcr.io/bymao/speedtest-x-go:latest
+    container_name: speedtest-x-go
+    restart: unless-stopped
+    ports:
+      - "9001:80"
+    environment:
+      WEBPORT: "80"
+      MAX_LOG_COUNT: "100"
+      IP_SERVICE: "ip.sb"
+      SAME_IP_MULTI_LOGS: "false"
+      TIME_ZONE: "Asia/Shanghai"
+    volumes:
+      - speedtest-x-go-logs:/speedlogs
+
+volumes:
+  speedtest-x-go-logs:
