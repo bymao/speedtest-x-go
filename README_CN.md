@@ -1,6 +1,8 @@
 # speedtest-x-go
 
-这是 `speedtest-x` 的 Go 重写版，保留原来的页面和接口路径：
+这是 [`speedtest-x`](https://github.com/BadApple9/speedtest-x) 的 Golang 重写版本，保留原来的页面功能和接口路径，去掉 PHP/Apache 运行环境，适合直接使用 Docker 或 Docker Compose 部署。
+
+项目镜像基于静态 Go 二进制和 `scratch` 运行层构建。当前 `ghcr.io/bymao/speedtest-x-go:latest` 镜像内容大小约 `2.9MB`，本地 Docker 显示的磁盘占用约 `9.7MB`。
 
 - `/index.html` 测速页
 - `/results.html` 测速结果

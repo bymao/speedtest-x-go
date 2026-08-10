@@ -1,6 +1,8 @@
 # speedtest-x-go
 
-Go rewrite of speedtest-x with the original UI and backend URL paths preserved.
+Golang rewrite of [speedtest-x](https://github.com/BadApple9/speedtest-x) with the original UI behavior and backend URL paths preserved. It removes the PHP/Apache runtime and is designed for Docker and Docker Compose deployment.
+
+The image is built from a static Go binary on a `scratch` runtime layer. The current `ghcr.io/bymao/speedtest-x-go:latest` image content size is about `2.9MB`; local Docker disk usage may show about `9.7MB`.
 
 ## Container Image
 

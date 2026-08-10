@@ -52,7 +52,7 @@ function Speedtest() {
     "LibreSpeed by Federico Dossena v5.2.2 - https://github.com/librespeed/speedtest"
   );
   console.log(
-      "speedtest-x - https://github.com/BadApple9/speedtest-x"
+      "speedtest-x-go - https://github.com/bymao/speedtest-x-go"
   );
 }
 
